@@ -10,3 +10,9 @@ def chl1_max_sum_sub_array(array, k):
         max_sum = max(current_sum, max_sum)  #Update the meximum
 
     return max_sum
+
+# Challenge 2: Longest Subarray with Sum Less Than or Equal to K:
+# Find the length of the longest subarray whose sum is ≤ K.
+def chl2_longest_sub_array_k_sum(array, k):
+    longest_sub = []
+    
