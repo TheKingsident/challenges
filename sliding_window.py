@@ -19,9 +19,10 @@ def chl2_longest_sub_array_k_sum(array, k):
     start = 0
 
     for i in range(len(array)):
-        if current_sum > k:
+        current_sum += array[i]
+        if current_sum > k and start <= i:
             current_sum -= array[start]
             start += 1
-        current_sum += array[i]
-        max_length = i - start + 1
+
+    max_length = max(max_length, i - start + 1)
 
