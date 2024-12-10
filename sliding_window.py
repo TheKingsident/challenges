@@ -14,5 +14,14 @@ def chl1_max_sum_sub_array(array, k):
 # Challenge 2: Longest Subarray with Sum Less Than or Equal to K:
 # Find the length of the longest subarray whose sum is ≤ K.
 def chl2_longest_sub_array_k_sum(array, k):
-    longest_sub = []
-    
+    current_sum = 0
+    max_length = 0
+    start = 0
+
+    for i in range(len(array)):
+        if current_sum > k:
+            current_sum -= array[start]
+            start += 1
+        current_sum += array[i]
+        max_length = i - start + 1
+
