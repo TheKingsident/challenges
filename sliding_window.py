@@ -26,3 +26,5 @@ def chl2_longest_sub_array_k_sum(array, k):
 
     max_length = max(max_length, i - start + 1)
 
+   return max_length
+
